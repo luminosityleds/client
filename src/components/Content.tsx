@@ -3,7 +3,15 @@ import React from "react";
 export const Content = () => {
     return (
       <div className="content">
-          <h1>Content goes here.</h1>
+          <div className="box-border bg-luminosity-blue">
+            Card 1
+          </div>
+          <div className="box-border bg-white">
+            Card 2
+          </div>
+          <div className="box-border bg-luminosity-blue">
+            Card 3
+          </div>
       </div>
     );
   };
