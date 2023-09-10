@@ -9,7 +9,7 @@ module.exports = {
         'luminosity-blue': '#eefdff'
       }, 
       fontFamily: {
-        'cards': ['Inter']
+        'inter': ['Inter']
       }
     },
   },
