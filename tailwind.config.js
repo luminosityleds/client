@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       colors: {
         'luminosity-blue': '#eefdff'
+      }, 
+      fontFamily: {
+        'cards': ['Inter']
       }
     },
   },
