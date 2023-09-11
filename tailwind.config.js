@@ -9,7 +9,7 @@ module.exports = {
         'electric-blue': '#eefdff'
       }, 
       fontFamily: {
-        'inter': ['Inter']
+        'inter': ['Inter', 'sans-serif']
       }
     },
   },
