@@ -7,9 +7,9 @@ export const Content = () => {
     return (
 <div className="flex flex-col font-inter text-left">
         {/*Card 1*/}
-          <div className="flex flex-col items-center p-10 bg-luminosity-blue">
+          <div className="px-4 flex flex-col py-20 items-center gap-8 bg-electric-blue">
             {/*Text container*/}
-            <div className="box-border pb-8">
+            <div className="">
               <p className="text-3xl pb-2">Illuminate individual expression and creativity...</p>
               <p className="text-xl">...with just the touch of a button.  A service that makes it easy to 
 light up a room.</p>
@@ -17,19 +17,19 @@ light up a room.</p>
             <img className="h-32" src={sunlightIcon} alt="Sunlight Icon"></img>
           </div>
         {/*Card 2*/}
-          <div className="flex flex-row py-20 justify-center bg-white">
+          <div className="px-4 flex flex-row gap-36 py-20 justify-center bg-white">
             {/*Text container*/}
-            <div className="box-border text-left w-1/4">
+            <div className="w-96">
               <p className="text-3xl pb-2">Seamless integration 
 and connection</p>
               <p className="text-xl">Lights are setup to hook up straight to Wi-Fi with a few easy steps.</p>
             </div>
-              <img className="h-24 box-border pl-64" src={signalIcon} alt="Signal Icon"></img>
+              <img className="h-28" src={signalIcon} alt="Signal Icon"></img>
           </div>
         {/*Card 3*/}
-          <div className="box-border flex flex-row py-20 justify-center bg-luminosity-blue">
-            <img className="h-48 box-border pr-32" src={barGraphIcon} alt="Bar graph icon"></img>
-            <div className="box-border text-left w-2/6">
+          <div className="px-4 flex flex-row gap-36 py-20 justify-center bg-electric-blue">
+            <img className="h-52" src={barGraphIcon} alt="Bar graph icon"></img>
+            <div className="w-96">
               <p className="text-3xl pb-2">Track metrics and trends</p>
               <p className="text-xl">Color, brightness, and whether or not the lights are on or off are tracked and easily accessible. </p>
             </div>

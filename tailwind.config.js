@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'luminosity-blue': '#eefdff'
+        'electric-blue': '#eefdff'
       }, 
       fontFamily: {
         'inter': ['Inter']
