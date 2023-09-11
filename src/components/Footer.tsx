@@ -1,11 +1,14 @@
 import React from "react";
-
-
+import aboutIcon from "/assets/About.svg"
+import teamIcon from "/assets/Team.svg"
+import githubIcon from "/assets/GitHub.svg"
+import whatsNewIcon from "/assets/WhatsNew.svg"
+import discordIcon from "/assets/Discord.svg"
 
 type Props = {};
 
 const Footer = (props: Props) =>{
-  const flexBetween = "flex items-center justify-between";
+  const flexBetween = "flex justify-evenly";
   return <nav> 
     <div
       className={`${flexBetween} fixed bottom-0 z-30 w-full py-6`}
