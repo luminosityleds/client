@@ -13,10 +13,10 @@ const Footer = (props: Props) =>{
         <div className = {`${flexBetween} w-full gap-8 text-sm bg-white `}>
           <div className = {`${flexBetween} w-full `}>
             <li className = {`${flexBetween} hover:electric-blue `}>About</li>
-            <li className = {`${flexBetween} hover:bg-sky-700 `}>Team</li>
-            <li className = {`${flexBetween} hover:bg-sky-700 `}>GitHub</li>
-            <li className = {`${flexBetween} hover:bg-sky-700 `}>What's New</li>
-            <li className = {`${flexBetween} hover:bg-sky-700 `}>Discord</li>
+            <li className = {`${flexBetween} hover:electric-blue `}>Team</li>
+            <li className = {`${flexBetween} hover:electric-blue `}>GitHub</li>
+            <li className = {`${flexBetween} hover:electric-blue `}>What's New</li>
+            <li className = {`${flexBetween} hover:electric-blue `}>Discord</li>
           </div>
         </div>
       </div>
