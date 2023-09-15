@@ -1,6 +1,6 @@
 import React from "react";
 
-const enum Orientation {
+export const enum Orientation {
     north,
     east,
     south,
@@ -16,9 +16,16 @@ type IconCardProps = {
     bgColor: string
 }
 
-export const IconCard = () => {
+export const IconCard = ({
+    headingText, bodyText, iconSrc,
+    iconAlt, orientation, bgColor}: IconCardProps) => {
     return(
-        <p>Hello world!</p>
+        <div className={bgColor}>
+            <p>{headingText}</p>
+            <p>{bodyText}</p>
+            <p>{orientation}</p>
+            <img src={iconSrc} alt={iconAlt}></img>
+        </div>
     )
 }
 
