@@ -14,5 +14,12 @@ type IconCardProps = {
     iconAlt: string,
     orientation: Orientation,
     bgColor: string
-
 }
+
+export const IconCard = () => {
+    return(
+        <p>Hello world!</p>
+    )
+}
+
+export default IconCard;
