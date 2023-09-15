@@ -1,6 +1,9 @@
 import React from "react";
 
-export const enum Orientation {
+const HORIZONTAL_TEXT_WIDTH = "w-[50rem]"
+const VERTICAL_TEXT_WIDTH = "w-[24rem]"
+
+export const enum Orientation { // orientation%2 gives 0 for vertical, 1 for horizontal
     north,
     east,
     south,
@@ -17,11 +20,11 @@ type IconCardProps = {
 }
 
 export const IconCard = ({
-    headingText, bodyText, iconSrc,
-    iconAlt, orientation, bgColor}: IconCardProps) => {
+    headingText, bodyText, iconSrc, iconAlt, orientation, bgColor}: IconCardProps) => {
+    var size = (orientation % 2) ? VERTICAL_TEXT_WIDTH : HORIZONTAL_TEXT_WIDTH
     return(
         <div className={bgColor}>
-            {textContainer(headingText, bodyText, "w-[50rem]")}
+            {textContainer(headingText, bodyText, size)}
             <p>{orientation}</p>
             <img src={iconSrc} alt={iconAlt}></img>
         </div>
