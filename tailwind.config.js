@@ -10,7 +10,11 @@ module.exports = {
       },
       fontFamily: {
         'inter': ['Inter']
+      },
+      fontSize: {
+        'footer-textSize': '1.6rem'
       }
+
 
     },
   },
