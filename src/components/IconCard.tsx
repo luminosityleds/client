@@ -21,10 +21,18 @@ export const IconCard = ({
     iconAlt, orientation, bgColor}: IconCardProps) => {
     return(
         <div className={bgColor}>
-            <p>{headingText}</p>
-            <p>{bodyText}</p>
+            {textContainer(headingText, bodyText, "w-[50rem]")}
             <p>{orientation}</p>
             <img src={iconSrc} alt={iconAlt}></img>
+        </div>
+    )
+}
+
+function textContainer(headingText: string, bodyText: string, width: string) {
+    return(
+        <div className={width}>
+            <p className="text-4xl pb-2">{headingText}</p>
+            <p className="text-2xl">{bodyText}</p>
         </div>
     )
 }
