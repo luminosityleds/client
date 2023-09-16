@@ -4,7 +4,9 @@ import { iconCards } from "../assets/cardData"
 
 export const Content = () => {
     const cards = iconCards.map((card, index) => 
-      <IconCard headingText={card.headingText} bodyText={card.bodyText} 
+      <IconCard 
+        headingText={card.headingText}
+        bodyText={card.bodyText} 
         iconSrc={card.iconSrc} iconAlt={card.iconAlt} 
         orientation={card.orientation}
         bgColor={(index % 2) ? "bg-white" : "bg-electric-blue"}/>)

@@ -56,6 +56,7 @@ export const IconCard = ({
     )
 }
 
+
 function textContainer(headingText: string, bodyText: string, width: string) {
     return(
         <div className={width}>
@@ -64,6 +65,7 @@ function textContainer(headingText: string, bodyText: string, width: string) {
         </div>
     )
 }
+
 
 function isHorizontal(orientation: Orientation) {
     return(orientation % 2)
