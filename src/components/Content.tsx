@@ -1,17 +1,17 @@
 import React from "react";
-import { IconCard, Orientation } from "./IconCard"
-import sunlightIcon from "../assets/omega.svg"
-import signalIcon from "../assets/signal.svg"
-import barGraphIcon from "../assets/bar-graph.svg"
-
-var dummyHead = "What is Lorem Ipsum?"
-var dummyBody = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500"
+import { IconCard } from "./IconCard"
+import { iconCards } from "../assets/cardData"
 
 export const Content = () => {
+    const cards = iconCards.map((card, index) => 
+      <IconCard headingText={card.headingText} bodyText={card.bodyText} 
+        iconSrc={card.iconSrc} iconAlt={card.iconAlt} 
+        orientation={card.orientation}
+        bgColor={(index % 2) ? "bg-white" : "bg-electric-blue"}/>)
+
     return (
       <div className="flex flex-col font-inter text-left">
-        <IconCard headingText={dummyHead} bodyText={dummyBody} iconSrc={sunlightIcon} iconAlt="light" orientation={Orientation.north} bgColor="bg-electric-blue"/>
-        <IconCard headingText={dummyHead} bodyText={dummyBody} iconSrc={signalIcon} iconAlt="signal" orientation={Orientation.east} bgColor="bg-white" />
+        {cards}
       </div>
       )
   }

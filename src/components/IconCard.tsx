@@ -1,19 +1,21 @@
 import React from "react";
 
 //Tailwind Classes
-const HORIZONTAL_TEXT_WIDTH = "w-[50rem]"
-const VERTICAL_TEXT_WIDTH = "w-[24rem]"
-const HORIZONTAL_CENTER = "items-center"
-const VERTICAL_CENTER = "justify-center"
+const HORIZONTAL_TEXT_WIDTH = "w-[32rem]"
+const VERTICAL_TEXT_WIDTH = "w-[50rem]"
+const HORIZONTAL_CENTER = "justify-center"
+const VERTICAL_CENTER = "items-center"
+const HORIZONTAL_GAP = "gap-48"
+const VERTICAL_GAP = "gap-8"
 
-export const enum Orientation { // orientation % 2 gives 0 for vertical, 1 for horizontal
+export const enum Orientation { // orientation % 2 gives 0 for horizontal, 1 for vertical
     north,
     east,
     south,
     west
 }
 
-type IconCardProps = {
+export type IconCardProps = {
     headingText: string,
     bodyText: string,
     iconSrc: string,
@@ -30,23 +32,25 @@ export const IconCard = ({
     orientation,
     bgColor}: IconCardProps) => {
 
-    var size, center, flexDirection
+    var size, center, flexDirection, gap
 
-    if (orientation % 2) {
-        size = VERTICAL_TEXT_WIDTH
-        center = VERTICAL_CENTER
-        flexDirection = "flex-row" + ((orientation===2) ? "reverse" : "")
-    }
-    else {
+    if (orientation % 2) { //horizontal
         size = HORIZONTAL_TEXT_WIDTH
         center = HORIZONTAL_CENTER
-        flexDirection = "flex-col" + ((orientation===1) ? "reverse" : "")
+        gap = HORIZONTAL_GAP
+        flexDirection = (orientation===Orientation.west) ? "flex-row-reverse" : "flex-row"
+    }
+    else { //vertical
+        size = VERTICAL_TEXT_WIDTH
+        center = VERTICAL_CENTER
+        gap = VERTICAL_GAP
+        flexDirection = (orientation===Orientation.north) ? "flex-col-reverse" : "flex-col"
     }
 
     return(
-        <div className={`px-4 flex ${flexDirection} py-20 gap-4 ${bgColor} ${center}`}>
+        <div className={`px-4 py-20 flex ${flexDirection} ${gap} ${bgColor} ${center}`}>
             {textContainer(headingText, bodyText, size)}
-            <img src={iconSrc} alt={iconAlt}></img>
+            <img className="h-44" src={iconSrc} alt={iconAlt}></img>
         </div>
     )
 }
