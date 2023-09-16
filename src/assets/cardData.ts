@@ -1,4 +1,4 @@
-import { Orientation } from "../components/IconCard"
+import { Orientation} from "../components/IconCard"
 import sunlightIcon from "../assets/light.svg"
 import signalIcon from "../assets/signal.svg"
 import barGraphIcon from "../assets/bars.svg"
