@@ -35,7 +35,7 @@ export const IconCard = ({
 
     var size, center, flexDirection, gap
 
-    if (orientation % 2) { //horizontal
+    if (isHorizontal(orientation)) { //horizontal
         size = HORIZONTAL_TEXT_WIDTH
         center = HORIZONTAL_CENTER
         gap = HORIZONTAL_GAP
@@ -63,6 +63,10 @@ function textContainer(headingText: string, bodyText: string, width: string) {
             <p className="text-2xl">{bodyText}</p>
         </div>
     )
+}
+
+function isHorizontal(orientation: Orientation) {
+    return(orientation % 2)
 }
 
 export default IconCard;
