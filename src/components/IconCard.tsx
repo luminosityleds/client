@@ -7,6 +7,7 @@ const HORIZONTAL_CENTER = "justify-center"
 const VERTICAL_CENTER = "items-center"
 const HORIZONTAL_GAP = "gap-48"
 const VERTICAL_GAP = "gap-8"
+const ICON_HEIGHT = "h-40"
 
 export const enum Orientation { // orientation % 2 gives 0 for horizontal, 1 for vertical
     north,
@@ -50,7 +51,7 @@ export const IconCard = ({
     return(
         <div className={`px-4 py-20 flex ${flexDirection} ${gap} ${bgColor} ${center}`}>
             {textContainer(headingText, bodyText, size)}
-            <img className="h-44" src={iconSrc} alt={iconAlt}></img>
+            <img className={ICON_HEIGHT} src={iconSrc} alt={iconAlt}></img>
         </div>
     )
 }
