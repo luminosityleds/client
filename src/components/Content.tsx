@@ -1,41 +1,19 @@
 import React from "react";
-import sunlightIcon from "../assets/omega.svg"
-import signalIcon from "../assets/signal.svg"
-import barGraphIcon from "../assets/bar-graph.svg"
+import { IconCard } from "./IconCard"
+import { iconCards } from "../assets/cardData"
 
 export const Content = () => {
+    const cards = iconCards.map((card, index) => 
+      <IconCard 
+        data={card}
+        //Alternate bgColor by row
+        bgColor={(index % 2) ? "bg-white" : "bg-electric-blue"}/>)
+
     return (
-<div className="flex flex-col font-inter text-left">
-        {/*Card 1*/}
-          <div className="px-4 flex flex-col py-20 items-center gap-4 bg-electric-blue">
-            {/*Text container*/}
-            <div className="w-[50rem]">
-              <p className="text-4xl pb-2">Illuminate individual expression and creativity...</p>
-              <p className="text-2xl">...with just the touch of a button.  A service that makes it easy to 
-light up a room.</p>
-            </div>
-            <img className="h-32" src={sunlightIcon} alt="Sunlight Icon"></img>
-          </div>
-        {/*Card 2*/}
-          <div className="px-4 flex flex-row gap-36 py-20 justify-center bg-white">
-            {/*Text container*/}
-            <div className="w-[24rem]">
-              <p className="text-4xl pb-2">Seamless integration 
-and connection</p>
-              <p className="text-2xl">Lights are setup to hook up straight to Wi-Fi with a few easy steps.</p>
-            </div>
-              <img className="h-32" src={signalIcon} alt="Signal Icon"></img>
-          </div>
-        {/*Card 3*/}
-          <div className="px-4 flex flex-row gap-36 py-20 justify-center bg-electric-blue">
-            <img className="h-44" src={barGraphIcon} alt="Bar graph icon"></img>
-            <div className="w-[28rem]">
-              <p className="text-4xl pb-2">Track metrics and trends</p>
-              <p className="text-2xl">Color, brightness, and whether or not the lights are on or off are tracked and easily accessible. </p>
-            </div>
-          </div>
+      <div className="flex flex-col font-inter text-left">
+        {cards}
       </div>
-    );
-  };
-  
+      )
+  }
+
   export default Content;
