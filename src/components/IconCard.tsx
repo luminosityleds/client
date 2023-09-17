@@ -16,42 +16,39 @@ export const enum Orientation { // orientation % 2 gives 0 for horizontal, 1 for
     west
 }
 
-export type IconCardProps = {
+interface ICardData {
     headingText: string,
     bodyText: string,
     iconSrc: string,
     iconAlt: string,
     orientation: Orientation,
+}
+export type IconCardProps = {
+    data: ICardData,
     bgColor: string
 }
 
-export const IconCard = ({
-    headingText,
-    bodyText,
-    iconSrc,
-    iconAlt,
-    orientation,
-    bgColor}: IconCardProps) => {
+export const IconCard = ({data, bgColor}: IconCardProps) => {
 
     var size, center, flexDirection, gap
 
-    if (isHorizontal(orientation)) { //horizontal
+    if (isHorizontal(data.orientation)) {
         size = HORIZONTAL_TEXT_WIDTH
         center = HORIZONTAL_CENTER
         gap = HORIZONTAL_GAP
-        flexDirection = (orientation===Orientation.west) ? "flex-row-reverse" : "flex-row"
+        flexDirection = (data.orientation===Orientation.west) ? "flex-row-reverse" : "flex-row"
     }
     else { //vertical
         size = VERTICAL_TEXT_WIDTH
         center = VERTICAL_CENTER
         gap = VERTICAL_GAP
-        flexDirection = (orientation===Orientation.north) ? "flex-col-reverse" : "flex-col"
+        flexDirection = (data.orientation===Orientation.north) ? "flex-col-reverse" : "flex-col"
     }
 
     return(
         <div className={`px-4 py-20 flex ${flexDirection} ${gap} ${bgColor} ${center}`}>
-            {textContainer(headingText, bodyText, size)}
-            <img className={ICON_HEIGHT} src={iconSrc} alt={iconAlt}></img>
+            {textContainer(data.headingText, data.bodyText, size)}
+            <img className={ICON_HEIGHT} src={data.iconSrc} alt={data.iconAlt}></img>
         </div>
     )
 }
