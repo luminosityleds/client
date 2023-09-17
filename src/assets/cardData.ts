@@ -1,15 +1,15 @@
-import { Orientation} from "../components/IconCard"
+import { Orientation, ICardData } from "../components/IconCard"
 import sunlightIcon from "../assets/light.svg"
 import signalIcon from "../assets/signal.svg"
 import barGraphIcon from "../assets/bars.svg"
 
-export const iconCards = [
+export const iconCards: ICardData[] = [
     {
         headingText: "Illuminate individual expression and creativity...",
         bodyText: "...with just the touch of a button.  A service that makes it easy to light up a room.",
         iconSrc: sunlightIcon,
         iconAlt: "Light Icon",
-        orientation: Orientation.south,
+        orientation: Orientation.south
     },
     {
         headingText: "Seamless integration and connection",

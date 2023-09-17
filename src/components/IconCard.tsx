@@ -16,12 +16,12 @@ export const enum Orientation { // orientation % 2 gives 0 for horizontal, 1 for
     west
 }
 
-interface ICardData {
+export interface ICardData {
     headingText: string,
     bodyText: string,
-    iconSrc: string,
-    iconAlt: string,
-    orientation: Orientation,
+    iconSrc: string, //url to the image source file
+    iconAlt: string, //icon alternative text
+    orientation: Orientation, // orientation of icon with respect to text
 }
 export type IconCardProps = {
     data: ICardData,

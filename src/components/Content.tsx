@@ -6,6 +6,7 @@ export const Content = () => {
     const cards = iconCards.map((card, index) => 
       <IconCard 
         data={card}
+        //Alternate bgColor by row
         bgColor={(index % 2) ? "bg-white" : "bg-electric-blue"}/>)
 
     return (
