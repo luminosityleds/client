@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <h1 className='underline'>If this is underlined then tailwind is working!</h1>
+      <h1 className='underline'>Top Page</h1>
       <Footer />
     </div>
   );

@@ -12,7 +12,11 @@ module.exports = {
         'inter': ['Inter']
       },
       fontSize: {
-        'footer-textSize': '1.6rem'
+        'footer-textSize': '1.66rem'
+        
+      },
+      variants:{
+        fill: ['hover', 'focus'],
       }
 
 
