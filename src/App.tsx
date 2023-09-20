@@ -1,12 +1,13 @@
 import React from 'react';
 import Content from './components/Content';
-import './App.css';
 import Footer from './components/Footer';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1 className='underline'>If this is underlined then tailwind is working!</h1>
+      <Content />
+      <Footer />
     </div>
   );
 }
