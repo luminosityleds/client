@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+import Content from './components/Content';
 import './App.css';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <h1 className='underline'>Top Page</h1>
-      <Footer />
+      <h1 className='underline'>If this is underlined then tailwind is working!</h1>
     </div>
   );
 }

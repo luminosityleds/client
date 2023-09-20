@@ -6,20 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'electric-blue': '#90E9EF',
-      },
+        'electric-blue': '#eefdff'
+      }, 
       fontFamily: {
-        'inter': ['Inter']
-      },
-      fontSize: {
-        'footer-textSize': '1.66rem'
-        
-      },
-      variants:{
-        fill: ['hover', 'focus'],
+        'inter': ['Inter', 'sans-serif']
       }
-
-
     },
   },
   plugins: [],
