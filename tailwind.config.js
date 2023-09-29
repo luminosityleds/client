@@ -13,7 +13,7 @@ module.exports = {
         'inter': ['Inter', 'sans-serif']
       },
       fontSize: {
-        footerFontSize: ['14px']
+        footerFontSize: ['18px']
       }
     },
   },
