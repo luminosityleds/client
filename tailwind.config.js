@@ -11,6 +11,9 @@ module.exports = {
       }, 
       fontFamily: {
         'inter': ['Inter', 'sans-serif']
+      },
+      fontSize: {
+        footerFontSize: ['14px']
       }
     },
   },
