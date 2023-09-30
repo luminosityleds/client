@@ -5,6 +5,12 @@ import githubIcon from "../assets/GitHub.svg"
 import whatsNewIcon from "../assets/WhatsNew.svg"
 import discordIcon from "../assets/Discord.svg"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
+
+
+const ICON = 'icon';
+
 type Props = {};
 
 const Footer = (props: Props) =>{
@@ -13,9 +19,7 @@ const Footer = (props: Props) =>{
 {/* flex justify-between flex-row inset-x-0 bottom-12 f */}
           <div className = "flex justify-between position:static py-8 pt-4 text-footerFontSize">
             <a href="#" className=" text-black hover:text-footer-blue flex items-center py-2 px-4  text-footer-textSize  ">
-              <svg className="flex-none mr-5 fill-current" width="40" height="39" viewBox="0 0 50 48" aria-hidden="true">
-              <path d="M22.5 16.8H27.5V12H22.5M25 43.2C13.975 43.2 5 34.584 5 24C5 13.416 13.975 4.8 25 4.8C36.025 4.8 45 13.416 45 24C45 34.584 36.025 43.2 25 43.2ZM25 0C21.717 0 18.4661 0.620779 15.4329 1.82689C12.3998 3.033 9.6438 4.80083 7.32233 7.02944C2.63392 11.5303 0 17.6348 0 24C0 30.3652 2.63392 36.4697 7.32233 40.9706C9.6438 43.1992 12.3998 44.967 15.4329 46.1731C18.4661 47.3792 21.717 48 25 48C31.6304 48 37.9893 45.4714 42.6777 40.9706C47.3661 36.4697 50 30.3652 50 24C50 20.8483 49.3534 17.7274 48.097 14.8156C46.8406 11.9038 44.9991 9.25804 42.6777 7.02944C40.3562 4.80083 37.6002 3.033 34.5671 1.82689C31.5339 0.620779 28.283 0 25 0ZM22.5 36H27.5V21.6H22.5V36Z"/>
-              </svg>
+              <FontAwesomeIcon icon={icon({name: 'user-secret'})} />
               <h1>About</h1>
             </a>
             <a href="#" className=" text-black hover:text-footer-blue flex items-center py-2 px-4 text-footer-textSize ">
