@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLightbulb, faWifi, faSignal} from '@fortawesome/free-solid-svg-icons'
 
 var icons = [
-  <FontAwesomeIcon icon={faLightbulb} className="h-36 fill-black"/>,
-  <FontAwesomeIcon icon={faWifi} className="h-36 fill-black"/>,
-  <FontAwesomeIcon icon={faSignal} className="h-36 fill-black"/>
+  <FontAwesomeIcon icon={faLightbulb} className="h-36 fill-black dark:fill-white"/>,
+  <FontAwesomeIcon icon={faWifi} className="h-36 fill-black dark:fill-white"/>,
+  <FontAwesomeIcon icon={faSignal} className="h-36 fill-black dark:fill-white"/>
 ]
 
 export const Content = () => {
@@ -15,11 +15,11 @@ export const Content = () => {
       <IconCard 
         data={card}
         //Alternate bgColor by row
-        bgColor={(index % 2) ? "bg-white" : "bg-electric-blue"}
+        bgColor={(index % 2) ? "bg-white dark:bg-black" : "bg-card-light-blue dark:bg-duke-blue"}
         icon={icons[index]}/>)
 
     return (
-      <div className="flex flex-col font-inter text-left">
+      <div className="flex flex-col font-inter text-left dark">
         {cards}
       </div>
       )
