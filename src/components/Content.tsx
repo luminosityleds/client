@@ -1,13 +1,22 @@
 import React from "react";
 import { IconCard } from "./IconCard"
 import { iconCards } from "../assets/cardData"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLightbulb, faWifi, faSignal} from '@fortawesome/free-solid-svg-icons'
+
+var icons = [
+  <FontAwesomeIcon icon={faLightbulb} className="h-36 fill-black"/>,
+  <FontAwesomeIcon icon={faWifi} className="h-36 fill-black"/>,
+  <FontAwesomeIcon icon={faSignal} className="h-36 fill-black"/>
+]
 
 export const Content = () => {
     const cards = iconCards.map((card, index) => 
       <IconCard 
         data={card}
         //Alternate bgColor by row
-        bgColor={(index % 2) ? "bg-white" : "bg-electric-blue"}/>)
+        bgColor={(index % 2) ? "bg-white" : "bg-electric-blue"}
+        icon={icons[index]}/>)
 
     return (
       <div className="flex flex-col font-inter text-left">
