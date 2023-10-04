@@ -2,12 +2,12 @@ import React from "react";
 import { IconCard } from "./IconCard"
 import { iconCards } from "../assets/cardData"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLightbulb, faWifi, faSignal} from '@fortawesome/free-solid-svg-icons'
+import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 var icons = [
-  <FontAwesomeIcon icon={faLightbulb} className="h-36 card-icon"/>,
-  <FontAwesomeIcon icon={faWifi} className="h-36 card-icon"/>,
-  <FontAwesomeIcon icon={faSignal} className="h-36 card-icon"/>
+  <FontAwesomeIcon icon={icon({name: 'lightbulb'})} className="h-36 text-black dark:text-white"/>,
+  <FontAwesomeIcon icon={icon({name: 'wifi'})} className="h-36 text-black dark:text-white"/>,
+  <FontAwesomeIcon icon={icon({name: 'signal'})} className="h-36 text-black dark:text-white"/>
 ]
 
 export const Content = () => {
