@@ -50,4 +50,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## `IconCard`
 
 A simple card that displays a heading text over a text body with an accompanying icon. The icon's placement with respect to the text is called its `orientation`, which is defined as an enum
-in the component module. Data for icon cards is stored inside and array of objects of type `ICardData` in `src/assets/cardData.tsx`. To add another card, add a new object to the array and follow the interface defined in the component module.
+in the component module. Data for icon cards is stored inside and array of objects of type `ICardData` in `src/assets/cardData.tsx`. To add another card, add a new object to the array and follow the interface defined in the component module. As of now, icons are passed as props to the IconCard component and, as such, are handled outside of the component.
