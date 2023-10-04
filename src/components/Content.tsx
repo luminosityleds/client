@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLightbulb, faWifi, faSignal} from '@fortawesome/free-solid-svg-icons'
 
 var icons = [
-  <FontAwesomeIcon icon={faLightbulb} className="h-36 fill-black dark:fill-white"/>,
-  <FontAwesomeIcon icon={faWifi} className="h-36 fill-black dark:fill-white"/>,
-  <FontAwesomeIcon icon={faSignal} className="h-36 fill-black dark:fill-white"/>
+  <FontAwesomeIcon icon={faLightbulb} className="h-36 card-icon"/>,
+  <FontAwesomeIcon icon={faWifi} className="h-36 card-icon"/>,
+  <FontAwesomeIcon icon={faSignal} className="h-36 card-icon"/>
 ]
 
 export const Content = () => {
@@ -26,3 +26,4 @@ export const Content = () => {
   }
 
   export default Content;
+
