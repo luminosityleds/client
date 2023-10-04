@@ -19,7 +19,7 @@ export const Content = () => {
         icon={icons[index]}/>)
 
     return (
-      <div className="flex flex-col font-inter text-left dark">
+      <div className="flex flex-col font-inter text-left">
         {cards}
       </div>
       )
