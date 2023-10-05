@@ -1,9 +1,8 @@
 # Components
-## Content
+## `Content`
 Page content between the Header and Footer components
 
 ## `IconCard`
-
 A simple card that displays a heading text over a text body with an accompanying icon. The icon's placement with respect to the text is called its `orientation`, which is defined as an enum
 in the component module. Data for icon cards is stored inside and array of objects of type `ICardData` in `src/assets/cardData.tsx`. To add another card, add a new object to the array and follow the interface defined in the component module.
 
