@@ -1,53 +1,31 @@
 # React + TypeScript + Vite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+From [Vite](https://vitejs.dev/guide/):
+## Overview
 
 # Components
+Vite (French word for "quick", pronounced /vit/, like "veet") is a build tool that aims to provide a faster and leaner development experience for modern web projects. It consists of two major parts:
+- A dev server that provides rich feature enhancements over native ES modules, for example extremely fast Hot Module Replacement (HMR).
+- A build command that bundles your code with Rollup, pre-configured to output highly optimized static assets for production.
 
-## `IconCard`
+Vite is opinionated and comes with sensible defaults out of the box. Read about what's possible in the Features Guide. Support for frameworks or integration with other tools is possible through Plugins. The Config Section explains how to adapt Vite to your project if needed.
 
-A simple card that displays a heading text over a text body with an accompanying icon. The icon's placement with respect to the text is called its `orientation`, which is defined as an enum
-in the component module. Data for icon cards is stored inside and array of objects of type `ICardData` in `src/assets/cardData.tsx`. To add another card, add a new object to the array and follow the interface defined in the component module.
+Vite is also highly extensible via its Plugin API and JavaScript API with full typing support.
+
+You can learn more about the rationale behind the project in the Why Vite section.
+
+## Scripts
+From the project's root directory, you can run:
+
+- `npm start dev` to start the development server
+- `npm build` to build for production
+- `npm preview` to locally previow production build
+- `npm test` to run Vitest
+- `npm test converge` to run Vitest convergance
+
+## Noteable Changes After Migrating to Vite from Create-React-App
+
+- `index.html` is now in root, instead of in `/public`
+- The Vite installation of tailwind requires PostCSS and Autoprefixer to be installed, as well
+- Instead of Jest, we'll be using Vitest for testing
+
