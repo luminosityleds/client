@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 //Tailwind Classes
 const HORIZONTAL_TEXT_WIDTH = "w-[32rem]"
@@ -7,7 +7,6 @@ const HORIZONTAL_CENTER = "justify-center"
 const VERTICAL_CENTER = "items-center"
 const HORIZONTAL_GAP = "gap-48"
 const VERTICAL_GAP = "gap-8"
-const ICON_HEIGHT = "h-40"
 
 export const enum Orientation { // orientation % 2 gives 0 for horizontal, 1 for vertical
     north,
@@ -19,16 +18,16 @@ export const enum Orientation { // orientation % 2 gives 0 for horizontal, 1 for
 export interface ICardData {
     headingText: string,
     bodyText: string,
-    iconSrc: string, //url to the image source file
-    iconAlt: string, //icon alternative text
-    orientation: Orientation, // orientation of icon with respect to text
+    orientation: Orientation // orientation of icon with respect to text
 }
 export type IconCardProps = {
     data: ICardData,
     bgColor: string
+    icon: React.ReactNode
+
 }
 
-export const IconCard = ({data, bgColor}: IconCardProps) => {
+export const IconCard = ({data, bgColor, icon}: IconCardProps) => {
 
     var size, center, flexDirection, gap
 
@@ -48,21 +47,19 @@ export const IconCard = ({data, bgColor}: IconCardProps) => {
     return(
         <div className={`px-4 py-20 flex ${flexDirection} ${gap} ${bgColor} ${center}`}>
             {textContainer(data.headingText, data.bodyText, size)}
-            <img className={ICON_HEIGHT} src={data.iconSrc} alt={data.iconAlt}></img>
+            {icon}
         </div>
     )
 }
 
-
 function textContainer(headingText: string, bodyText: string, width: string) {
     return(
-        <div className={width}>
+        <div className={`${width} dark:text-white`}>
             <p className="text-4xl pb-2">{headingText}</p>
             <p className="text-2xl">{bodyText}</p>
         </div>
     )
 }
-
 
 function isHorizontal(orientation: Orientation) {
     return(orientation % 2)
