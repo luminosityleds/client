@@ -1,3 +1,19 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
+
+import { create } from 'zustand';
+
+
+interface ToggleState {
+  light: boolean;
+  toggleShow: () => void;
+}
+
+const useToggle = create<ToggleState>((set) => ({
+  light: true,
+  toggleShow: () => set((state) => ({ light: !state.light})),
+}))
+
 export const Header = () => {
   return (
     <nav className="nav flex justify-between items-center w-full bg-[#90E9EF] text-black p-4">
@@ -8,6 +24,12 @@ export const Header = () => {
         <span className="text-lg font-semibold font-sans hover:text-white cursor-pointer">
           Luminosity LEDs
         </span>
+      </div>
+
+      <div>
+        <FontAwesomeIcon icon={icon({name: 'moon'})} className="h-8 text-black dark:text-white"/>
+        <FontAwesomeIcon onClick={console.log} icon={icon({name: 'toggle-on'})} className="h-8 px-4 text-black dark:text-white"/>
+        <FontAwesomeIcon icon={icon({name: 'sun'})} className="h-8 text-black dark:text-white"/>
       </div>
 
       <ul className="flex space-x-4">
