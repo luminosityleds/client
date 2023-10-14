@@ -1,50 +1,50 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { library } from '@fortawesome/fontawesome-svg-core'
 
-const ICON = 'icon';
 
-type Props = {};
-
-const Footer = (props: Props) =>{
-  const iconStyle = { //fontAwesome Icon default styles
-    fontSize: '35px',
-    padding: '0.5em',
-  };
-
-  return <nav> 
-      <div className = "flex justify-between position:static py-8 pt-4 text-footerFontSize">
-        <a href="#" className=" text-black hover:text-footer-blue flex items-center py-2 px-4  text-footer-textSize  ">
-          <div style={iconStyle}>
-            <FontAwesomeIcon icon={icon({name: 'info-circle'})} />
-          </div>
-          <h1>About</h1>
-        </a>
-        <a href="#" className=" text-black hover:text-footer-blue flex items-center py-2 px-4 text-footer-textSize ">
-          <div style={iconStyle}>
-            <FontAwesomeIcon icon={icon({name: 'users'})} />
-          </div>
-          <h1>Team</h1>
-        </a>
-        <a href="#" className=" text-black hover:text-footer-blue flex items-center py-2 px-4 text-footer-textSize  ">
-          <div style={iconStyle}>
-            <FontAwesomeIcon icon={icon({name: 'github', style: 'brands', })} /> 
-          </div>
-          <h1>GitHub</h1>
-        </a>
-        <a href="#" className="  hover:text-footer-blue hover:stroke-footer-blue  flex items-center py-2 px-2 text-footer-textSize  ">
-          <div style={iconStyle}>
-            <FontAwesomeIcon icon={icon({name: 'lightbulb', style: 'regular'})} />
-          </div>
-          <h1>What's New</h1>
-        </a>
-        <a href="#" className=" text-black hover:text-footer-blue flex items-center py-2 px-4 text-footer-textSize  ">
-          <div style={iconStyle}>
-            <FontAwesomeIcon icon={icon({name: 'discord', style: 'brands'})} /> 
-          </div>
-          <h1>Discord</h1>
-        </a>
-      </div>
-    </nav>
+//defaul style for the text and padding of the footer
+const textStyle =
+{
+  fontSize: 'footer-textSize',
+  padding: '0.5em',
 };
 
-  export default Footer;
+//main features of the footer which declare the type 
+//this includes the hyperlink, the physical icon image, and text besides the icon
+interface footerFeatures
+ {
+  href: string; //
+  iconFA?: typeof library;
+  iconTextName: string;
+}
+
+//main function of the footer which positions and formats the three properties in the interface
+function FooterStyling ({ href, iconFA, iconTextName,  }: footerFeatures) 
+{
+  return (
+        <a href={href} className="text-black hover:text-footer-blue flex items-center py-2 px-4">
+          <div style={textStyle}>
+            <FontAwesomeIcon icon={iconFA} />
+          </div>
+          <h1>{iconTextName}</h1>
+        </a>
+  );
+}
+
+// final function to instantiate FooterStyling and declare the properties 
+function Footer() 
+{
+  return (
+    <div className = "flex justify-between position:static py-8 pt-4"> 
+      {FooterStyling({ href: '#', iconTextName: 'About', iconFA: icon({ name: 'info-circle'  })})}
+      {FooterStyling({ href: '#', iconTextName: 'Team', iconFA: icon({ name: 'users' }) })}
+      {FooterStyling({ href: '#', iconTextName: 'GitHub', iconFA: icon({ name: 'github', style: 'brands' }) })}
+      {FooterStyling({ href: '#', iconTextName: "What's New", iconFA: icon({ name: 'lightbulb', style: 'regular' }) })}
+      {FooterStyling({ href: '#', iconTextName: 'Discord', iconFA: icon({ name: 'discord', style: 'brands' }) })} 
+    </div>
+  );
+}
+
+export default Footer;
