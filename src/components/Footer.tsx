@@ -1,48 +1,52 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
-import { library } from '@fortawesome/fontawesome-svg-core'
 
+const iconsFA = [
+  <FontAwesomeIcon
+    icon={icon({ name: "info-circle"})}
+  />,
+  <FontAwesomeIcon
+    icon={icon({ name: "users" })}
+  />,
+  <FontAwesomeIcon
+    icon={icon({ name: 'github', style: 'brands' })}
+  />,
+  <FontAwesomeIcon
+    icon={icon({ name: 'lightbulb'})}
+  />,
+  <FontAwesomeIcon
+    icon={icon({ name: 'discord', style: 'brands'})}
+  />
+];
 
-//defaul style for the text and padding of the footer
-const textStyle =
-{
-  fontSize: 'footer-textSize',
-  padding: '0.5em',
-};
-
-//main features of the footer which declare the type 
-//this includes the hyperlink, the physical icon image, and text besides the icon
-interface footerFeatures
+interface FooterProps
  {
   href: string; //
-  iconFA?: typeof library;
+  icon: React.ReactNode;
   iconTextName: string;
 }
 
-//main function of the footer which positions and formats the three properties in the interface
-function FooterStyling ({ href, iconFA, iconTextName,  }: footerFeatures) 
+function FooterButton ({ href, icon, iconTextName}: FooterProps) 
 {
   return (
         <a href={href} className="text-black hover:text-electric-blue flex items-center py-2 px-4">
-          <div style={textStyle}>
-            <FontAwesomeIcon icon={iconFA} />
+          <div className = "text-2xl p-3" >
+          {icon}
           </div>
           <h1>{iconTextName}</h1>
         </a>
   );
 }
-
-// final function to instantiate FooterStyling and declare the properties 
 function Footer() 
 {
   return (
-    <div className = "flex justify-between position:static py-8 pt-4"> 
-      {FooterStyling({ href: '#', iconTextName: 'About', iconFA: icon({ name: 'info-circle'  })})}
-      {FooterStyling({ href: '#', iconTextName: 'Team', iconFA: icon({ name: 'users' }) })}
-      {FooterStyling({ href: '#', iconTextName: 'GitHub', iconFA: icon({ name: 'github', style: 'brands' }) })}
-      {FooterStyling({ href: '#', iconTextName: "What's New", iconFA: icon({ name: 'lightbulb', style: 'regular' }) })}
-      {FooterStyling({ href: '#', iconTextName: 'Discord', iconFA: icon({ name: 'discord', style: 'brands' }) })} 
+    <div className = "flex justify-between position:static py-8 pt-4 text-black dark:text-white"> 
+      <FooterButton href='#' icon={iconsFA[0]} iconTextName='About' />
+      <FooterButton href='#' icon={iconsFA[1]} iconTextName='Team' />
+      <FooterButton href='#' icon={iconsFA[2]} iconTextName='GitHub' />
+      <FooterButton href='#' icon={iconsFA[3]} iconTextName="What's New" />
+      <FooterButton href='#' icon={iconsFA[4]} iconTextName='Discord' />
     </div>
   );
 }
