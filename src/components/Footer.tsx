@@ -24,7 +24,7 @@ interface footerFeatures
 function FooterStyling ({ href, iconFA, iconTextName,  }: footerFeatures) 
 {
   return (
-        <a href={href} className="text-black hover:text-footer-blue flex items-center py-2 px-4">
+        <a href={href} className="text-black hover:text-electric-blue flex items-center py-2 px-4">
           <div style={textStyle}>
             <FontAwesomeIcon icon={iconFA} />
           </div>
