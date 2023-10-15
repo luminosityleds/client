@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink" xmlspace="preserve" xmlnsserif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g id="_-Curves-" serifid="(Curves)" transform="matrix(0.799999,0,0,0.799999,9.39288e-05,38.4001)">
-        <path d="M317.455,61.44C228.87,-20.495 91.095,-20.465 2.544,61.44C-0.786,64.52 -0.851,69.735 2.369,72.93L19.49,89.915C22.56,92.965 27.5,93.03 30.69,90.105C103.65,23.265 216.34,23.25 289.315,90.105C292.505,93.03 297.445,92.96 300.515,89.915L317.635,72.93C320.85,69.735 320.785,64.52 317.455,61.44ZM160,160C142.325,160 128,174.325 128,192C128,209.675 142.325,224 160,224C177.675,224 192,209.675 192,192C192,174.325 177.675,160 160,160ZM261.335,118.205C203.705,67.24 116.23,67.295 58.664,118.205C55.215,121.255 55.105,126.55 58.38,129.78L75.6,146.775C78.6,149.735 83.43,149.935 86.625,147.175C128.6,110.89 191.495,110.97 233.37,147.175C236.565,149.935 241.395,149.74 244.395,146.775L261.615,129.78C264.895,126.55 264.78,121.25 261.335,118.205Z" style="fill-rule:nonzero;"/>
-    </g>
-    <rect id="Artboard1" x="0" y="0" width="256" height="256" style="fill:none;"/>
-</svg>
