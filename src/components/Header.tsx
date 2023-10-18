@@ -48,7 +48,7 @@ export const Header = () => {
 
         <ul className="flex space-x-4">
           <li>
-            <button className="px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white">
+            <button className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white">
               Log In
             </button>
           </li>
