@@ -2,6 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
+const darkMode = 'dark:text-white  dark:hover:text-suva-grey';
+const lightMode = 'text-black hover:text-electric-blue';
+const footerButtonUtils = 'flex items-center py-2 px-4';
+const textPaddingSize = 'text-2xl p-3';
+const footerDivStyle = 'dark:bg-black flex justify-between position:static py-8 pt-4 ';
 
 const iconsFA = [
   <FontAwesomeIcon
@@ -27,22 +32,22 @@ interface FooterProps
   iconTextName: string;
 }
 
-
 function FooterButton ({ href, icon, iconTextName}: FooterProps) 
 {
   return (
-        <a href={href} className="text-black hover:text-electric-blue dark:text-white  dark:hover:text-suva-grey flex items-center py-2 px-4">
-          <div className = "text-2xl p-3" >
+        <a href={href} className= {`${darkMode} ${lightMode} ${footerButtonUtils}`}>
+          <div className = {textPaddingSize} >
           {icon}
           </div>
           <h1>{iconTextName}</h1>
         </a>
   );
 }
+
 function Footer() 
 {
   return (
-    <div className = "dark:bg-black flex justify-between position:static py-8 pt-4 "> 
+    <div className = {footerDivStyle}> 
       <FooterButton href='#' icon={iconsFA[0]} iconTextName='About' />
       <FooterButton href='#' icon={iconsFA[1]} iconTextName='Team' />
       <FooterButton href='#' icon={iconsFA[2]} iconTextName='GitHub' />
@@ -51,5 +56,4 @@ function Footer()
     </div>
   );
 }
-
 export default Footer;
