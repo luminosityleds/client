@@ -3,6 +3,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import LogoIcon from "./LogoIcon";
 
 import { useToggle } from "../ts/ToggleHeader";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -48,9 +49,11 @@ export const Header = () => {
 
         <ul className="flex space-x-4">
           <li>
-            <button className="px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white">
-              Log In
-            </button>
+            <Link to="/login">
+              <button className="px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white">
+                Log In
+              </button>
+            </Link>
           </li>
           <li>
             <button className="px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white">
