@@ -31,7 +31,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "test:coverage": "vitest run --coverage --watch=false"
+    "coverage": "vitest run --coverage --watch=false"
   },
   "eslintConfig": {
     "extends": [
