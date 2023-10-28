@@ -1,18 +1,15 @@
 import React from "react";
-import Content from "./components/Content";
-import Header from "./components/Header";
-import { useToggle } from "./ts/ToggleHeader";
+import FrontPage from "./components/FrontPage";
+import Login from "./components/Login";
+import { Route, Routes } from "react-router-dom"
 
 import "./App.css";
 
 function App() {
-  const lightMode = useToggle((state) => state.light);
-  return (
-    <div className={`"App" ${lightMode ? "" : "dark"}`}>
-      <Header />
-      <Content />
-    </div>
-  );
+  return <Routes>
+    <Route path="/" element={<FrontPage/>} />
+    <Route path="/login" element={<Login />} />
+  </Routes>
 }
 
 export default App;
