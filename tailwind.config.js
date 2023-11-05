@@ -9,10 +9,11 @@ module.exports = {
         "electric-blue": "#90e9ef",
         "card-dark-blue": "#0c0d49",
         "duke-blue": "#000274",
+        "suva-grey": "#8D8D8D",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
-      },
+      }, 
     },
   },
   plugins: [],

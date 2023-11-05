@@ -61,8 +61,8 @@ function textContainer(headingText: string, bodyText: string, width: string) {
     )
 }
 
-function isHorizontal(orientation: Orientation) {
-    return(orientation % 2)
+export function isHorizontal(orientation: Orientation) {
+    return(Boolean(orientation % 2))
 }
 
 export default IconCard;
