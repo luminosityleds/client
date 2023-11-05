@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import LogoIcon from "./LogoIcon";
-import {useTransition, useSpring, animated } from '@react-spring/web'
+import { useTransition, useSpring, animated } from '@react-spring/web'
 import { useToggle } from "../ts/ToggleHeader";
 import { Link } from "react-router-dom";
 
@@ -10,10 +10,10 @@ import { Link } from "react-router-dom";
 export const Header = () => {
 
   const springs = useSpring({
-    config:{
+    config: {
       duration: 300,
     },
-    transform: useToggle.getState().light ? "translateX(15px)" : "translateX(0px)",
+    transform: useToggle.getState().light ? "translateX(16px)" : "translateX(0px)",
   })
   return (
     <div className="border-b border-black border-opacity-60">
@@ -30,11 +30,11 @@ export const Header = () => {
         <div className="flex flex-row">
           <FontAwesomeIcon
             icon={icon({ name: "moon" })}
-            className="h-8 px-4 text-black dark:text-white"
+            className="h-8 px-2.5 text-black dark:text-white"
           />
-          <div className="relative bg-green-500 rounded-full h-5 w-10 flex flex-col justify-center">
-            <animated.button  style={springs}
-              
+          <div className="relative bg-green-500 rounded-full h-5 w-9 flex flex-col justify-center m-2    ">
+            <animated.button style={springs}
+
               onClick={() => {
                 useToggle.setState({ light: !useToggle.getState().light });
                 console.log(useToggle.getState().light);
@@ -43,19 +43,19 @@ export const Header = () => {
               {useToggle.getState().light ? (
                 <FontAwesomeIcon
                   icon={icon({ name: "circle" })}
-                  className="h-3.5 pr-4 py-2.5 text-black dark:text-white"
+                  className="h-3.5 pr-4 py-1.5 text-black dark:text-white"
                 />
               ) : (
                 <FontAwesomeIcon
                   icon={icon({ name: "circle" })}
-                  className="h-3.5 pr-4 py-2.5 text-black dark:text-white"
+                  className="h-3.5  pr-4 py-1.5 text-black dark:text-white"
                 />
               )}
             </animated.button>
           </div>
           <FontAwesomeIcon
             icon={icon({ name: "sun" })}
-            className="h-8 px-4 text-black dark:text-white"
+            className="h-8 px-2.5 text-black dark:text-white"
           />
         </div>
 
