@@ -13,7 +13,7 @@ export const Header = () => {
           <a href="/" className="site-logo hover:text-white">
             <LogoIcon />
           </a>
-          <span className="text-lg font-sans hover:text-white cursor-pointer dark:text-white dark:hover:text-navbar-dark-grey">
+          <span className="text-lg font-sans hover:text-white cursor-pointer dark:text-white dark:hover:text-suva-grey">
             Luminosity LEDs
           </span>
         </div>
@@ -50,13 +50,13 @@ export const Header = () => {
         <ul className="flex space-x-4">
           <li>
             <Link to="/login">
-              <button className="px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white">
+              <button className="px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white dark:hover:text-suva-grey">
                 Log In
               </button>
             </Link>
           </li>
           <li>
-            <button className="px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white dark:hover:text-navbar-dark-grey">
+            <button className="px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white dark:hover:text-suva-grey">
               Sign Up
             </button>
           </li>
