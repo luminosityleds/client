@@ -32,10 +32,7 @@ export const Header = () => {
             icon={icon({ name: "moon" })}
             className="h-8 px-4 text-black dark:text-white"
           />
-          <div className="relative">
-            <svg className="absolute h-30 text-black dark:text-white" width="100%" height="100%" viewBox="0 0 576 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <path d="M192,64C86,64 0,150 0,256C0,362 86,448 192,448L384,448C490,448 576,362 576,256C576,150 490,64 384,64L192,64Z"/>
-            </svg>
+          <div className="relative bg-green-500 rounded-full h-5 w-10 flex flex-col justify-center">
             <animated.button  style={springs}
               
               onClick={() => {
