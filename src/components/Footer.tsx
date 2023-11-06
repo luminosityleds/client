@@ -50,7 +50,7 @@ function Footer()
     <div className = {footerDivStyle}> 
       <FooterButton href='#' icon={iconsFA[0]} iconTextName='About' />
       <FooterButton href='#' icon={iconsFA[1]} iconTextName='Team' />
-      <FooterButton href='#' icon={iconsFA[2]} iconTextName='GitHub' />
+      <FooterButton href='https://github.com/luminosityleds' icon={iconsFA[2]} iconTextName='GitHub' />
       <FooterButton href='#' icon={iconsFA[3]} iconTextName="What's New" />
       <FooterButton href='#' icon={iconsFA[4]} iconTextName='Discord' />
     </div>
