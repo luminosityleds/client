@@ -32,7 +32,7 @@ export const Header = () => {
             icon={icon({ name: "moon" })}
             className="h-8 px-2.5 text-black dark:text-white"
           />
-          <div className="relative bg-green-500 rounded-full h-5 w-9 flex flex-col justify-center m-2    ">
+          <div className="relative bg-black dark:bg-white rounded-full h-5 w-9 flex flex-col justify-center m-2    ">
             <animated.button style={springs}
 
               onClick={() => {
@@ -43,12 +43,12 @@ export const Header = () => {
               {useToggle.getState().light ? (
                 <FontAwesomeIcon
                   icon={icon({ name: "circle" })}
-                  className="h-3.5 pr-4 py-1.5 text-black dark:text-white"
+                  className="h-3.5 pr-4 py-1.5 text-electric-blue dark:text-duke-blue"
                 />
               ) : (
                 <FontAwesomeIcon
                   icon={icon({ name: "circle" })}
-                  className="h-3.5  pr-4 py-1.5 text-black dark:text-white"
+                  className="h-3.5  pr-4 py-1.5 text-electric-blue dark:text-duke-blue"
                 />
               )}
             </animated.button>
