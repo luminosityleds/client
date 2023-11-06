@@ -20,7 +20,7 @@ export const Header = () => {
 
   const springs = useSpring({
     config: {
-      duration: 300, //in mS
+      duration: 225, //in mS
     },
     transform: useToggle.getState().light ? "translateX(16px)" : "translateX(0px)",
     from: { y: 1.6 }, 
