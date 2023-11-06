@@ -5,6 +5,17 @@ import { useSpring, animated } from '@react-spring/web'
 import { useToggle } from "../ts/ToggleHeader";
 import { Link } from "react-router-dom";
 
+const iconsFA = [
+  <FontAwesomeIcon
+    icon={icon({ name: 'moon'})}
+    className="h-8 px-2.5 text-black dark:text-white"
+  />,
+  <FontAwesomeIcon
+    icon={icon({ name: "sun" })}
+    className="h-8 px-2.5 text-black dark:text-white"
+  />
+];
+
 export const Header = () => {
 
   const springs = useSpring({
@@ -27,10 +38,7 @@ export const Header = () => {
           </span>
         </div>
         <div className="flex flex-row">
-          <FontAwesomeIcon
-            icon={icon({ name: "moon" })}
-            className="h-8 px-2.5 text-black dark:text-white"
-          />
+        {iconsFA[0]}
           <div className="relative bg-black dark:bg-white rounded-full h-5 w-9 flex flex-col justify-center m-2    ">
             <animated.button style={springs}
               onClick={() => {
@@ -41,8 +49,8 @@ export const Header = () => {
               {useToggle.getState().light ? (
                 <FontAwesomeIcon
                   icon={icon({ name: "circle" })}
-                  className="h-3.5 pr-4 py-1.5 text-electric-blue dark:text-duke-blue"
-                />
+                  className="h-3.5  pr-4 py-1.5 text-electric-blue dark:text-duke-blue"
+                /> 
               ) : (
                 <FontAwesomeIcon
                   icon={icon({ name: "circle" })}
@@ -51,10 +59,7 @@ export const Header = () => {
               )}
             </animated.button>
           </div>
-          <FontAwesomeIcon
-            icon={icon({ name: "sun" })}
-            className="h-8 px-2.5 text-black dark:text-white"
-          />
+          {iconsFA[1]}
         </div>
         <ul className="flex space-x-4">
           <li>
