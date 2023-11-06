@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import LogoIcon from "./LogoIcon";
-import { useTransition, useSpring, animated } from '@react-spring/web'
+import { useSpring, animated } from '@react-spring/web'
 import { useToggle } from "../ts/ToggleHeader";
 import { Link } from "react-router-dom";
 
