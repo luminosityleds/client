@@ -5,16 +5,16 @@ import { useTransition, useSpring, animated } from '@react-spring/web'
 import { useToggle } from "../ts/ToggleHeader";
 import { Link } from "react-router-dom";
 
-
-
 export const Header = () => {
 
   const springs = useSpring({
     config: {
-      duration: 300,
+      duration: 300, //in mS
     },
     transform: useToggle.getState().light ? "translateX(16px)" : "translateX(0px)",
+    from: { y: 1.6 }, 
   })
+
   return (
     <div className="border-b border-black border-opacity-60">
       <nav className="nav flex justify-between items-center w-full bg-electric-blue dark:bg-duke-blue text-black dark:text-white">
@@ -26,7 +26,6 @@ export const Header = () => {
             Luminosity LEDs
           </span>
         </div>
-
         <div className="flex flex-row">
           <FontAwesomeIcon
             icon={icon({ name: "moon" })}
@@ -34,7 +33,6 @@ export const Header = () => {
           />
           <div className="relative bg-black dark:bg-white rounded-full h-5 w-9 flex flex-col justify-center m-2    ">
             <animated.button style={springs}
-
               onClick={() => {
                 useToggle.setState({ light: !useToggle.getState().light });
                 console.log(useToggle.getState().light);
@@ -58,7 +56,6 @@ export const Header = () => {
             className="h-8 px-2.5 text-black dark:text-white"
           />
         </div>
-
         <ul className="flex space-x-4">
           <li>
             <Link to="/login">
