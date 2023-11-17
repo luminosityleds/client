@@ -17,14 +17,14 @@ export const Login = () => {
                         lightMode
                             ? "bg-duke-blue"
                             : "bg-black" 
-                    } text-white w-[720px] h-[120px] py-2 px-12 rounded mb-32 flex items-center justify-center`}
+                    } text-white w-[720px] h-[120px] py-2 px-12 rounded-lg mb-32 flex items-center justify-center`}
                 >
                     <FontAwesomeIcon
                     icon={icon({ name: 'github', style: 'brands' })}
                     className="mr-2 h-12" 
                     /> 
                     <span className="flex-grow text-base">
-                        <p className="text-[48px]">Log In with Github</p>
+                        <p className="text-[48px] ml-2">Log In with Github</p>
                         </span>
                 </button>
                     
@@ -34,14 +34,14 @@ export const Login = () => {
                         lightMode 
                             ? "bg-duke-blue"
                             : "bg-black" 
-                    } text-white w-[720px] h-[120px] py-2 px-12 rounded mb-16 flex items-center justify-center`}
+                    } text-white w-[720px] h-[120px] py-2 px-12 rounded-lg mb-16 flex items-center justify-center`}
                     >
                     <FontAwesomeIcon
                     icon={icon({ name: 'google', style: 'brands' })}
                     className="mr-2 h-12" 
                     /> 
                     <span className="flex-grow text-base">
-                    <p className="text-[48px]">Log In with Google</p>
+                    <p className="text-[48px] ml-2">Log In with Google</p>
                         </span>
                 </button>  
                     
