@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 // Interface to define how ToggleState should be formatted
 interface ToggleState {
