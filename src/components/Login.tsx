@@ -15,9 +15,9 @@ export const Login = () => {
                 <button 
                     className={`${ 
                         lightMode
-                            ? "bg-duke-blue"
-                            : "bg-black" 
-                    } text-white w-[720px] h-[120px] py-2 px-12 rounded-lg mb-32 flex items-center justify-center`}
+                            ? "bg-electric-blue border-black hover:bg-card-light-blue"
+                            : "bg-black text-white hover:bg-suva-grey" 
+                    } border w-[720px] h-[120px] py-2 px-12 rounded-lg mb-24 flex items-center justify-center`}
                 >
                     <FontAwesomeIcon
                     icon={icon({ name: 'github', style: 'brands' })}
@@ -32,9 +32,9 @@ export const Login = () => {
                 <button 
                     className={`${
                         lightMode 
-                            ? "bg-duke-blue"
-                            : "bg-black" 
-                    } text-white w-[720px] h-[120px] py-2 px-12 rounded-lg mb-16 flex items-center justify-center`}
+                            ? "bg-electric-blue border-black hover:bg-card-light-blue"
+                            : "bg-black text-white hover:bg-suva-grey" 
+                    } border w-[720px] h-[120px] py-2 px-12 rounded-lg mb-12 flex items-center justify-center`}
                     >
                     <FontAwesomeIcon
                     icon={icon({ name: 'google', style: 'brands' })}
@@ -45,15 +45,30 @@ export const Login = () => {
                         </span>
                 </button>  
                     
-                <p 
+                <div 
+                    className="text-[24px] mb-10">
+                <span
                     className={`${
                         lightMode
-                            ? "text-duke-blue"
-                            : "text-white" 
-                    } text-[24px] mb-10`}
-            >
-                Forgot Password? | Register
-                </p>
+                            ? "text-duke-blue hover:text-electric-blue"
+                            : "text-white hover:text-suva-grey" 
+                    }`}
+                >Forgot Password? </span> 
+                <span 
+                    className={`${
+                        lightMode
+                            ? "text-electric-blue"
+                            : "text-suva-grey" 
+                    }`}
+                >|</span> 
+                <span
+                    className={`${
+                        lightMode
+                            ? "text-duke-blue hover:text-electric-blue"
+                            : "text-white hover:text-suva-grey" 
+                    }`}
+                > Register</span>
+                </div>
             </div>
         </div>
     </div>
