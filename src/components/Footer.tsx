@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
+
 const darkMode = 'dark:text-white  dark:hover:text-suva-grey';
 const lightMode = 'text-black hover:text-electric-blue';
 const footerButtonUtils = 'flex items-center py-2 px-4';
@@ -46,7 +47,7 @@ function Footer() {
   return (
     <div className={footerDivStyle}>
       <FooterButton href='#' icon={iconsFA[0]} iconTextName='About' />
-      <FooterButton href='#' icon={iconsFA[1]} iconTextName='Team' />
+      <FooterButton href='/Team' icon={iconsFA[1]} iconTextName='Team' />
       <FooterButton href='https://github.com/luminosityleds' icon={iconsFA[2]} iconTextName='GitHub' />
       <FooterButton href='#' icon={iconsFA[3]} iconTextName="What's New" />
       <FooterButton href='#' icon={iconsFA[4]} iconTextName='Discord' />
