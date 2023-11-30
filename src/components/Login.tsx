@@ -17,7 +17,7 @@ export const Login = () => {
                         lightMode
                             ? "bg-card-sky-blue border-black hover:bg-electric-blue"
                             : "bg-black text-white hover:bg-charcoal-black" 
-                    } border w-[720px] h-[120px] py-2 px-12 rounded-lg mb-24 flex items-center justify-center`}
+                    } border-[3px] rounded-[15px] border-radius: 15px w-[720px] h-[120px] py-2 px-12 mb-24 flex items-center justify-center`}
                 >
                     <FontAwesomeIcon
                     icon={icon({ name: 'github', style: 'brands' })}
@@ -38,7 +38,7 @@ export const Login = () => {
                         lightMode 
                             ? "bg-card-sky-blue border-black hover:bg-electric-blue"
                             : "bg-black text-white hover:bg-charcoal-black" 
-                    } border w-[720px] h-[120px] py-2 px-12 rounded-lg mb-12 flex items-center justify-center`}
+                    } border-[3px] rounded-[15px] w-[720px] h-[120px] py-2 px-12 mb-12 flex items-center justify-center`}
                     >
                     <FontAwesomeIcon
                     icon={icon({ name: 'google', style: 'brands' })}
