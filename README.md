@@ -29,3 +29,28 @@ From the project's root directory, you can run:
 - The Vite installation of tailwind requires PostCSS and Autoprefixer to be installed, as well
 - Instead of Jest, we'll be using Vitest for testing
 
+## Docker / Containerization
+
+### Build
+
+```shell
+docker build -t console:latest_tag . 
+```
+
+#### Example
+
+```shell
+docker build -t console:0.1.0 .
+```
+
+### Run
+
+```shell
+docker run -d --rm -p 3000:3000 console:latest_tag
+```
+
+#### Example
+
+```shell
+docker run -d --rm -p 3000:3000 console:0.1.0
+```
