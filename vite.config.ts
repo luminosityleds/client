@@ -12,9 +12,11 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './src/tests/setupTests.ts',
     css: true,
-    reporters: ['verbose'],
+    reporters: ['default'],
     coverage: {
-      reporter: ['text', 'json', 'html'],
+      // provider: 'istanbul',
+      lines: 90,
+      reporter: ['text', 'json'],
       include: ['src/**/*'],
       exclude: [],
     }
