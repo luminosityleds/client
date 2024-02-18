@@ -29,3 +29,33 @@ From the project's root directory, you can run:
 - The Vite installation of tailwind requires PostCSS and Autoprefixer to be installed, as well
 - Instead of Jest, we'll be using Vitest for testing
 
+## Docker / Containerization
+
+### Build
+
+```shell
+docker build -t console:latest_tag . 
+```
+
+#### Example
+
+```shell
+docker build -t console:0.1.0 .
+```
+
+### Run
+
+```shell
+docker run -d --rm -p 3000:3000 console:latest_tag
+```
+
+#### Example
+
+```shell
+docker run -d --rm -p 3000:3000 console:0.1.0
+```
+
+# Test Coverage
+As part of our continuous integreation (CI) proceedures, we'll now test if this codebase's line coverage stays above 90% in every pull request before allowing a merge. This means that we should try to create unit tests for our code, going forward. This will ensure that our code is tested and working and allow us to catch breaking changes before mergeing to master. For more information on code coverage, see https://www.atlassian.com/continuous-delivery/software-testing/code-coverage.
+For information on how to write tests using Vitest, see https://vitest.dev/.
+For general information on testing in React, see https://www.freecodecamp.org/news/testing-react-hooks/.
