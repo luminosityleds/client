@@ -1,17 +1,14 @@
-import Header from "./Header";
-import Content from "./Content";
-import Footer from "./Footer";
-import { useToggle } from "../ts/ToggleHeader";
+import LightMode from "./LightMode";
 
 export const FrontPage = () => {
-  const lightMode = useToggle((state) => state.light);
   return (
-    <div className={`"App" ${lightMode ? "" : "dark"}`}>
-      <Header />
-      <Content />
-      <Footer />
+    <div>
+      <LightMode />
     </div>
   );
 };
 
 export default FrontPage;
+
+// TODO: Light mode state needs to persist through refresh and exiting same browser(non incognito mode) and moving through different pages.
+// TODO: https://stackoverflow.com/questions/28314368/how-to-maintain-state-after-a-page-refresh-in-react-js
