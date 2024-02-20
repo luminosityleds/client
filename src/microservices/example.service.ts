@@ -16,7 +16,8 @@ const ExampleClient = axios.create({ //replace <example> with your service name,
 
 //Next, we will define the fronted API that we'll use in our code to send requests to backend
 async function getAll() {
-    return await ExampleClient.get<Array<IExampleData>>("/todos");
+    let response = await ExampleClient.get<Array<IExampleData>>("/todos");
+    return response.data;
 }
 
 async function get(id: string) { //get one (by id)
