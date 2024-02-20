@@ -35,12 +35,12 @@ async function update(data: IExampleData, id: any) { //update one (by id)
 //You can add any other methods that you think would help, just see what is
 //available to you on the backend and read up on HTTP requests.
 
-const example = [
+const example = {
     getAll,
     get,
     create,
     update
-]
+}
 
 export default example;
 //Now our service is ready to be used in components!
