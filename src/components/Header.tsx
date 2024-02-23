@@ -1,30 +1,31 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import LogoIcon from "./LogoIcon";
-import { useSpring, animated } from '@react-spring/web'
+import { useSpring, animated } from "@react-spring/web";
 import { useToggle } from "../ts/ToggleHeader";
 import { Link } from "react-router-dom";
 
 const iconsFA = [
   <FontAwesomeIcon
-    icon={icon({ name: 'moon'})}
+    icon={icon({ name: "moon" })}
     className="h-8 px-2.5 text-black dark:text-white"
   />,
   <FontAwesomeIcon
     icon={icon({ name: "sun" })}
     className="h-8 px-2.5 text-black dark:text-white"
-  />
+  />,
 ];
 
 export const Header = () => {
-
   const springs = useSpring({
     config: {
       duration: 225, //in mS
     },
-    transform: useToggle.getState().light ? "translateX(16px)" : "translateX(0px)",
-    from: { y: 1.6 }, 
-  })
+    transform: useToggle.getState().light
+      ? "translateX(16px)"
+      : "translateX(0px)",
+    from: { y: 1.6 },
+  });
 
   return (
     <div className="border-b border-black border-opacity-60">
@@ -38,9 +39,10 @@ export const Header = () => {
           </span>
         </div>
         <div className="flex flex-row">
-        {iconsFA[0]}
+          {iconsFA[0]}
           <div className="relative bg-black dark:bg-white rounded-full h-5 w-9 flex flex-col justify-center m-2    ">
-            <animated.button style={springs}
+            <animated.button
+              style={springs}
               onClick={() => {
                 useToggle.setState({ light: !useToggle.getState().light });
                 console.log(useToggle.getState().light);
@@ -50,7 +52,7 @@ export const Header = () => {
                 <FontAwesomeIcon
                   icon={icon({ name: "circle" })}
                   className="h-3.5  pr-4 py-1.5 text-electric-blue dark:text-duke-blue"
-                /> 
+                />
               ) : (
                 <FontAwesomeIcon
                   icon={icon({ name: "circle" })}
@@ -70,9 +72,11 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <button className="px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white dark:hover:text-suva-grey">
-              Sign Up
-            </button>
+            <Link to="/register">
+              <button className="px-4 py-2 text-black rounded hover:bg-A6EDF2 hover:text-white font-sans text-base dark:text-white dark:hover:text-suva-grey">
+                Sign Up
+              </button>
+            </Link>
           </li>
         </ul>
       </nav>
