@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Header from "./Header";
 import { useToggle } from "../ts/ToggleHeader";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const lightMode = useToggle((state) => state.light);
@@ -32,7 +33,7 @@ export const Login = () => {
                   lightMode ? "text-duke-blue" : "text-white"
                 } text-[48px] ml-2`}
               >
-                Log In with Github
+                Sign Up with Github
               </p>
             </span>
           </button>
@@ -54,7 +55,7 @@ export const Login = () => {
                   lightMode ? "text-duke-blue" : "text-white"
                 } text-[48px] ml-2`}
               >
-                Log In with Google
+                Sign Up with Google
               </p>
             </span>
           </button>
@@ -66,12 +67,10 @@ export const Login = () => {
                   ? "text-duke-blue hover:text-sapphire-blue"
                   : "text-white hover:text-suva-grey"
               }`}
-            >
-              Forgot Password?{" "}
-            </span>
-            <span className={`${lightMode ? "text-duke-blue" : "text-white"}`}>
-              |
-            </span>
+            ></span>
+            <span
+              className={`${lightMode ? "text-duke-blue" : "text-white"}`}
+            ></span>
             <span
               className={`${
                 lightMode
@@ -80,7 +79,7 @@ export const Login = () => {
               }`}
             >
               {" "}
-              Register
+              <Link to="/login">Already have an account? Login</Link>
             </span>
           </div>
         </div>
