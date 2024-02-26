@@ -13,7 +13,7 @@ return (
         
        
        
-        <div className={`"App" ${lightMode ? "bg-[#88dbe1]" : "dark bg-black"} h-screen flex flex-col w-1/4 `}>
+        <div className={`"App" ${lightMode ? "bg-[#88dbe1]" : "dark bg-black"} h-screen flex flex-col w-[390px] `}>
 
             <SideBarButton/>
           
