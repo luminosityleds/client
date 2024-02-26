@@ -15,7 +15,7 @@ const useCounterStore = create<CounterState>((set) => ({
   decrement: () => set((state) => ({ count: state.count - 1 })),
 }));
 
-interface Todo {
+interface Todo { 
   userId: number;
   id: number;
   title: string;
