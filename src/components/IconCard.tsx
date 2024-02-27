@@ -49,7 +49,7 @@ export const IconCard = ({data, bgColor, icon}: IconCardProps) => {
     return(
         <div className={`px-8 py-20 flex ${flexDirection} ${gap} ${bgColor} ${center} ${align}`}>
             {textContainer(data.headingText, data.bodyText, size)}
-            <div className="m-10 flex items-center">
+            <div className="m-16 flex items-center">
                 {icon}
             </div>
         </div>
