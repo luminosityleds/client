@@ -65,7 +65,7 @@ export const Header = () => {
           </div>
           {iconsFA[1]}
         </div>
-        <ul className="flex">
+        <ul className="flex space-x-16">
           <li>
             <Link to="/login">
               <button className="px-4 py-2 text-light rounded hover:bg-A6EDF2 hover:text-hover-light font-sans text-[32px] dark:text-dark dark:hover:text-hover-dark">
