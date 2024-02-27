@@ -29,7 +29,7 @@ export const Header = () => {
 
   return (
     <div className="border-b border-black border-opacity-60">
-      <nav className="nav h-[56px] flex justify-between items-center w-full bg-electric-blue dark:bg-duke-blue text-black dark:text-white">
+      <nav className="nav h-[56px] flex justify-between items-center w-full bg-electric-blue dark:bg-duke-blue text-black dark:text-white pr-4">
         <div className="flex items-center">
           <a href="/" className="site-logo">
             <LogoIcon />
