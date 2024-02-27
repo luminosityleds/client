@@ -58,7 +58,7 @@ export const IconCard = ({data, bgColor, icon}: IconCardProps) => {
 
 function textContainer(headingText: string, bodyText: string, width: string) {
     return(
-        <div className={`${width} dark:text-white`}>
+        <div className={`${width} text-light dark:text-dark`}>
             <p className={`${HEADING_SIZE} pb-2`}>{headingText}</p>
             <p className={BODY_SIZE}>{bodyText}</p>
         </div>
