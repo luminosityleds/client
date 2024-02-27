@@ -53,7 +53,7 @@ function FooterButton ({ href, icon, iconTextName}: FooterProps)
 function Footer() 
 {
   return (
-    <div className = {`h-180 px-8 ${footerDivStyle}`}> 
+    <div className = {`h-180 px-4 ${footerDivStyle}`}> 
       <FooterButton href='#' icon={iconsFA[0]} iconTextName='About' />
       <FooterButton href='#' icon={iconsFA[1]} iconTextName='Team' />
       <FooterButton href='https://github.com/luminosityleds' icon={iconsFA[2]} iconTextName='GitHub' />
