@@ -68,16 +68,27 @@ export const Header = () => {
         <ul className="flex space-x-16">
           <li>
             <Link to="/login">
+<<<<<<< HEAD
+              <button className="px-4 py-2 font-sans text-base text-black rounded hover:bg-A6EDF2 hover:text-white dark:text-white dark:hover:text-suva-grey">
+=======
               <button className="px-4 py-2 text-light rounded hover:bg-A6EDF2 hover:text-hover-light font-sans text-[32px] dark:text-dark dark:hover:text-hover-dark">
+>>>>>>> master
                 Log In
               </button>
             </Link>
           </li>
           <li>
+<<<<<<< HEAD
+            <Link to ="">
+            <button className="px-4 py-2 font-sans text-base text-black rounded hover:bg-A6EDF2 hover:text-white dark:text-white dark:hover:text-suva-grey">
+              Sign Up
+            </button>
+=======
             <Link to="/register">
             <button className="px-4 py-2 text-light rounded hover:bg-A6EDF2 hover:text-hover-light font-sans text-[32px] dark:text-dark dark:hover:text-hover-dark">
                 Sign Up
               </button>
+>>>>>>> master
             </Link>
           </li>
         </ul>
