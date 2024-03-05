@@ -29,21 +29,6 @@ export const Header = () => {
 
   return (
     <div className="border-b border-black border-opacity-60">
-<<<<<<< HEAD
-      <nav className="flex items-center justify-between w-full text-black nav bg-electric-blue dark:bg-duke-blue dark:text-white">
-        <div className="flex items-center space-x-4">
-          <a href="/" className="site-logo hover:text-white">
-            <LogoIcon />
-          </a>
-          <span className="font-sans text-lg cursor-pointer hover:text-white dark:text-white dark:hover:text-suva-grey">
-            Luminosity LEDs
-          </span>
-        </div>
-        <div className="flex flex-row">
-        {iconsFA[0]}
-          <div className="relative flex flex-col justify-center h-5 m-2 bg-black rounded-full dark:bg-white w-9 ">
-            <animated.button style={springs}
-=======
       <nav className="nav h-[56px] flex justify-between items-center w-full bg-electric-blue dark:bg-duke-blue text-black dark:text-white pr-4">
         <div className="flex items-center">
           <a href="/" className="site-logo">
@@ -60,7 +45,6 @@ export const Header = () => {
           <div className="relative bg-light dark:bg-dark rounded-full h-[25px] w-[50px] flex flex-col justify-center m-2    ">
             <animated.button
               style={springs}
->>>>>>> master
               onClick={() => {
                 useToggle.setState({ light: !useToggle.getState().light });
                 console.log(useToggle.getState().light);
