@@ -13,9 +13,12 @@ module.exports = {
         "charcoal-black": "#131313",
         "duke-blue": "#000274",
         "suva-grey": "#8D8D8D",
-        "light": "#000274",
+        // white
+        "light": "#000000",
         "dark": "#ffffff",
-        "hover-light": "#0005ff",
+        // dark gray
+        "hover-light": "#A9A9A9",
+        // light gray
         "hover-dark": "#8d8d8d"
         
       },
