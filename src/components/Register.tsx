@@ -30,7 +30,7 @@ export const Login = () => {
             <span className="flex-grow text-base">
               <p
                 className={`${
-                  lightMode ? "text-duke-blue" : "text-white"
+                  lightMode ? "text-light" : "text-dark"
                 } text-[48px] ml-2`}
               >
                 Sign Up with Github
@@ -52,7 +52,7 @@ export const Login = () => {
             <span className="flex-grow text-base">
               <p
                 className={`${
-                  lightMode ? "text-duke-blue" : "text-white"
+                  lightMode ? "text-light" : "text-dark"
                 } text-[48px] ml-2`}
               >
                 Sign Up with Google
@@ -64,22 +64,22 @@ export const Login = () => {
             <span
               className={`${
                 lightMode
-                  ? "text-duke-blue hover:text-sapphire-blue"
-                  : "text-white hover:text-suva-grey"
+                  ? "text-light hover:text-hover-light"
+                  : "text-dark hover:text-hover-dark"
               }`}
             ></span>
             <span
-              className={`${lightMode ? "text-duke-blue" : "text-white"}`}
+              className={`${lightMode ? "text-light" : "text-dark"}`}
             ></span>
             <span
               className={`${
                 lightMode
-                  ? "text-duke-blue hover:text-sapphire-blue"
-                  : "text-white hover:text-suva-grey"
+                  ? "text-light hover:text-hover-light"
+                  : "text-dark hover:text-hover-dark"
               }`}
             >
               {" "}
-              <Link to="/login">Already have an account? Login</Link>
+              <Link to="/login">Already have an account?</Link>
             </span>
           </div>
         </div>

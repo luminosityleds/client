@@ -2,11 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
-const darkMode = 'dark:text-white  dark:hover:text-suva-grey';
-const lightMode = 'text-black hover:text-electric-blue';
+const darkMode = 'cursor-pointer dark:text-dark dark:hover:text-hover-dark';
+const lightMode = 'text-light hover:text-hover-light cursor-pointer';
 const footerButtonUtils = 'flex items-center py-2 px-4';
-const textPaddingSize = 'text-[32pt] p-3';
-const footerDivStyle = 'dark:bg-black flex justify-between position:static py-8 pt-4 ';
+const textPaddingSize = 'text-2xl p-3';
+const footerDivStyle = 'bg-electric-blue dark:bg-duke-blue flex position:static space-x-48 px-48 py-8 pt-4 ';
 
 const ICON_HEIGHT = "h-[48px]"
 const iconsFA = [
@@ -45,7 +45,7 @@ function FooterButton ({ href, icon, iconTextName}: FooterProps)
           <div className = {textPaddingSize} >
           {icon}
           </div>
-          <h1 className='text-[32pt]'>{iconTextName}</h1>
+          <h1 className='text-2xl'>{iconTextName}</h1>
         </a>
   );
 }
@@ -54,11 +54,17 @@ function Footer()
 {
   return (
     <div className = {`h-180 px-4 ${footerDivStyle}`}> 
-      <FooterButton href='#' icon={iconsFA[0]} iconTextName='About' />
-      <FooterButton href='#' icon={iconsFA[1]} iconTextName='Team' />
-      <FooterButton href='https://github.com/luminosityleds' icon={iconsFA[2]} iconTextName='GitHub' />
-      <FooterButton href='#' icon={iconsFA[3]} iconTextName="What's New" />
-      <FooterButton href='#' icon={iconsFA[4]} iconTextName='Discord' />
+      <div>
+        <span className = {`px-8 text-3xl font-bold dark:text-dark`}>Organization</span>
+        <FooterButton href='#' icon={iconsFA[0]} iconTextName='About' />
+        <FooterButton href='#' icon={iconsFA[1]} iconTextName='Team' />
+        <FooterButton href='#' icon={iconsFA[3]} iconTextName="What's New" />
+      </div>
+      <div>
+        <span className = {`px-8 text-3xl font-bold dark:text-dark`}>Contact Us</span>
+        <FooterButton href='https://github.com/luminosityleds' icon={iconsFA[2]} iconTextName='GitHub' />
+        <FooterButton href='#' icon={iconsFA[4]} iconTextName='Discord' />
+      </div>
     </div>
   );
 }
