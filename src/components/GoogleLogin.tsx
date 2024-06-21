@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useGoogleLogin } from "@react-oauth/google"
+import { GoogleOAuthProvider, useGoogleLogin } from "@react-oauth/google"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
@@ -7,7 +7,7 @@ export const GoogleLogin = () => {
     const login = useGoogleLogin({
       onSuccess: async response => {
         try {
-          const google_response = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", 
+          const google_response = await axios.get("https://localhost:8000/api/sessions/oauth/google", 
           {
             headers: {
               "Authorization": `Bearer ${response.access_token}` 
@@ -19,23 +19,23 @@ export const GoogleLogin = () => {
             name: google_response.data.name
           }
           
-          const login_response = axios.post('http://localhost:5000/',
-          google_data
-          ).then(response => {
-            if (response.data.success === true) {
-              // Set that the user is now logged in
-              window.localStorage.setItem("isLoggedIn", "true")
-              window.localStorage.setItem("userName", google_data.name)
+          // const login_response = axios.post('http://localhost:8000/',
+          // google_data
+          // ).then(response => {
+          //   if (response.data.success === true) {
+          //     // Set that the user is now logged in
+          //     window.localStorage.setItem("isLoggedIn", "true")
+          //     window.localStorage.setItem("userName", google_data.name)
   
-              // Go back to the homepage
-              window.location.href = "/"
-            }
+          //     // Go back to the homepage
+          //     window.location.href = "/"
+          //   }
   
-            else if (response.data.success === false) {
-              // Go to the registration page
-              window.location.href = "/register"
-            }
-          });
+          //   else if (response.data.success === false) {
+          //     // Go to the registration page
+          //     window.location.href = "/register"
+          //   }
+          // });
         }
         catch (err) {
           console.log(err);
