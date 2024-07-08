@@ -4,7 +4,7 @@
 //https://www.bezkoder.com/react-typescript-axios/
 
 import axios from "axios";
-import IExampleData from "../ts/IExampleData"; //We need an interface to type our data
+import IExampleData from "../interfaces/IExampleData"; //We need an interface to type our data
 
 //First, we need to initialize an axios instance that will connect to the backend
 const ExampleClient = axios.create({ //replace <example> with your service name, like "account"
