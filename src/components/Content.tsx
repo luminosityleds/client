@@ -3,6 +3,7 @@ import { IconCard } from "./IconCard";
 import { iconCards } from "../assets/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { IAccountData } from "../interfaces/IAccountData";
 
 var icons = [
   <FontAwesomeIcon

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import example from "../microservices/example.service";
 import { getAll } from "../microservices/example.service";
-import IExampleData from "../ts/IExampleData";
 import { create } from "zustand";
 
 interface CounterState {
