@@ -7,11 +7,10 @@ import { getGoogleAuthURL } from "../ts/loginUtils";
 export const Login = () => {
   const lightMode = useToggle((state) => state.light);
 
-  //TODO: Move this to the page view when we switch over to that framework
   const googleLogin = () => {
     const authUrl = getGoogleAuthURL();
     window.location.href = authUrl;
-  }
+  };
 
   return (
     <div
