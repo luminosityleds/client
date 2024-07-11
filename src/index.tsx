@@ -12,7 +12,7 @@ root.render(
   <BrowserRouter>
     <React.StrictMode>
       <GoogleOAuthProvider
-        clientId={import.meta.env.VITE_GOOGLE_OAUTH_CLIENT_ID2}
+        clientId={import.meta.env.VITE_GOOGLE_OAUTH_CLIENT_ID}
       >
         <App />
       </GoogleOAuthProvider>

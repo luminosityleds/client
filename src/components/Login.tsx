@@ -2,13 +2,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Header from "./Header";
 import { useToggle } from "../ts/ToggleHeader";
-import { useGoogleLogin } from "@react-oauth/google";
+import { getGoogleAuthURL } from "../ts/loginUtils";
 
 export const Login = () => {
   const lightMode = useToggle((state) => state.light);
-  const login = useGoogleLogin({
-    onSuccess: (tokenResponse) => console.log(tokenResponse),
-  });
+
+  //TODO: Move this to the page view when we switch over to that framework
+  const googleLogin = () => {
+    const authUrl = getGoogleAuthURL();
+    window.location.href = authUrl;
+  }
 
   return (
     <div
@@ -42,7 +45,7 @@ export const Login = () => {
           </button>
 
           <button
-            onClick={() => login()}
+            onClick={() => googleLogin()}
             className={`${
               lightMode
                 ? "bg-card-sky-blue border-black hover:bg-electric-blue"
