@@ -13,6 +13,11 @@ module.exports = {
         "charcoal-black": "#131313",
         "duke-blue": "#000274",
         "suva-grey": "#8D8D8D",
+        "light": "#000274",
+        "dark": "#ffffff",
+        "hover-light": "#0005ff",
+        "hover-dark": "#8d8d8d"
+        
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

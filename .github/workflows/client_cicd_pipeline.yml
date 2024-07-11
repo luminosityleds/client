@@ -1,17 +1,16 @@
-name: Typescript Coverage
+name: Client CICD Pipeline
 
 on:
   push:
     branches: ["**"]
 
 jobs:
-  coverage:
+  testing-and-coverage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
-      - name: Install dependencies and run code coverage
+          node-version: latest
+      - name: Install dependencies, run code coverage (coverage runs unit tests automatically)
         run: npm ci && npm run coverage
-
