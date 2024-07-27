@@ -5,7 +5,7 @@ const HORIZONTAL_TEXT_WIDTH = "w-[500px]"
 const VERTICAL_TEXT_WIDTH = "w-[1200px]"
 const HORIZONTAL_CENTER = "justify-around"
 const VERTICAL_CENTER = "items-center"
-const HORIZONTAL_GAP =  "" //"gap-20"
+const HORIZONTAL_GAP = "" //"gap-20"
 const VERTICAL_GAP = "" //"gap-10"
 const HEADING_SIZE = "text-[64px]"
 const BODY_SIZE = "text-[48px]"
@@ -29,7 +29,7 @@ export type IconCardProps = {
 
 }
 
-export const IconCard = ({data, bgColor, icon}: IconCardProps) => {
+export const IconCard = ({ data, bgColor, icon }: IconCardProps) => {
 
     var size, center, flexDirection, gap, align
 
@@ -37,16 +37,16 @@ export const IconCard = ({data, bgColor, icon}: IconCardProps) => {
         size = HORIZONTAL_TEXT_WIDTH
         center = HORIZONTAL_CENTER
         gap = HORIZONTAL_GAP
-        flexDirection = (data.orientation===Orientation.west) ? "flex-row-reverse" : "flex-row"
+        flexDirection = (data.orientation === Orientation.west) ? "flex-row-reverse" : "flex-row"
     }
     else { //vertical
         size = VERTICAL_TEXT_WIDTH
         center = VERTICAL_CENTER
         gap = VERTICAL_GAP
-        flexDirection = (data.orientation===Orientation.north) ? "flex-col-reverse" : "flex-col"
+        flexDirection = (data.orientation === Orientation.north) ? "flex-col-reverse" : "flex-col"
     }
 
-    return(
+    return (
         <div className={`px-8 py-20 flex ${flexDirection} ${gap} ${bgColor} ${center} ${align}`}>
             {textContainer(data.headingText, data.bodyText, size)}
             <div className="m-16 flex items-center">
@@ -57,7 +57,7 @@ export const IconCard = ({data, bgColor, icon}: IconCardProps) => {
 }
 
 function textContainer(headingText: string, bodyText: string, width: string) {
-    return(
+    return (
         <div className={`${width} text-light dark:text-dark`}>
             <p className={`${HEADING_SIZE} pb-2`}>{headingText}</p>
             <p className={BODY_SIZE}>{bodyText}</p>
@@ -66,7 +66,7 @@ function textContainer(headingText: string, bodyText: string, width: string) {
 }
 
 export function isHorizontal(orientation: Orientation) {
-    return(Boolean(orientation % 2))
+    return (Boolean(orientation % 2))
 }
 
 export default IconCard;

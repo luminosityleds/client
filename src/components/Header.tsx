@@ -75,7 +75,7 @@ export const Header = () => {
           </li>
           <li>
             <Link to="/register">
-            <button className="px-4 py-2 text-light rounded hover:bg-A6EDF2 hover:text-hover-light font-sans text-[32px] dark:text-dark dark:hover:text-hover-dark">
+              <button className="px-4 py-2 text-light rounded hover:bg-A6EDF2 hover:text-hover-light font-sans text-[32px] dark:text-dark dark:hover:text-hover-dark">
                 Sign Up
               </button>
             </Link>
