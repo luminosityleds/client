@@ -8,9 +8,17 @@ jobs:
   testing-and-coverage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        name: Checkout
       - uses: actions/setup-node@v3
+        name: Set up latest version of Node
         with:
           node-version: latest
-      - name: Install dependencies, run code coverage (coverage runs unit tests automatically)
-        run: npm ci && npm run coverage
+      - name: Install CI dependencies
+        run: npm ci
+      - name: Run code coverage (coverage runs unit tests automatically)
+        run: npm run coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
