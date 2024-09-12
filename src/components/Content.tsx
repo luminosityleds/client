@@ -1,4 +1,3 @@
-import React from "react";
 import { IconCard } from "./IconCard";
 import { iconCards } from "../assets/cardData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,6 +21,7 @@ var icons = [
 export const Content = () => {
   const cards = iconCards.map((card, index) => (
     <IconCard
+      key={index}
       data={card}
       //Alternate bgColor by row
       bgColor={
