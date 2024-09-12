@@ -1,12 +1,14 @@
 import React from 'react';
 
 //Tailwind Classes
-const HORIZONTAL_TEXT_WIDTH = "w-[32rem]"
-const VERTICAL_TEXT_WIDTH = "w-[50rem]"
-const HORIZONTAL_CENTER = "justify-center"
+const HORIZONTAL_TEXT_WIDTH = "w-[500px]"
+const VERTICAL_TEXT_WIDTH = "w-[1200px]"
+const HORIZONTAL_CENTER = "justify-around"
 const VERTICAL_CENTER = "items-center"
-const HORIZONTAL_GAP = "gap-48"
-const VERTICAL_GAP = "gap-8"
+const HORIZONTAL_GAP =  "" //"gap-20"
+const VERTICAL_GAP = "" //"gap-10"
+const HEADING_SIZE = "text-[64px]"
+const BODY_SIZE = "text-[48px]"
 
 export const enum Orientation { // orientation % 2 gives 0 for horizontal, 1 for vertical
     north,
@@ -29,7 +31,7 @@ export type IconCardProps = {
 
 export const IconCard = ({data, bgColor, icon}: IconCardProps) => {
 
-    var size, center, flexDirection, gap
+    var size, center, flexDirection, gap, align
 
     if (isHorizontal(data.orientation)) {
         size = HORIZONTAL_TEXT_WIDTH
@@ -45,18 +47,20 @@ export const IconCard = ({data, bgColor, icon}: IconCardProps) => {
     }
 
     return(
-        <div className={`px-4 py-20 flex ${flexDirection} ${gap} ${bgColor} ${center}`}>
+        <div className={`px-8 py-20 flex ${flexDirection} ${gap} ${bgColor} ${center} ${align}`}>
             {textContainer(data.headingText, data.bodyText, size)}
-            {icon}
+            <div className="m-16 flex items-center">
+                {icon}
+            </div>
         </div>
     )
 }
 
 function textContainer(headingText: string, bodyText: string, width: string) {
     return(
-        <div className={`${width} dark:text-white`}>
-            <p className="text-4xl pb-2">{headingText}</p>
-            <p className="text-2xl">{bodyText}</p>
+        <div className={`${width} text-light dark:text-dark`}>
+            <p className={`${HEADING_SIZE} pb-2`}>{headingText}</p>
+            <p className={BODY_SIZE}>{bodyText}</p>
         </div>
     )
 }
