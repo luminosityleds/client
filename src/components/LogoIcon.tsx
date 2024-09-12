@@ -30,10 +30,10 @@ export const LogoIcon = () => {
       <path
         d="M122.816 25.0169C93.8489 25.0169 70.3716 51.6693 70.3716 84.5475V142.816H175.26M125.333 25.0169C154.297 25.0169 177.778 51.6693 177.778 84.5475V110.816M95.4063 158.222H109.628V236.782H95.4063V158.222ZM146.962 158.222H161.184V216.814H146.962V158.222ZM56.8889 158.222H199.111V142.816H56.8889V158.222Z"
         stroke="black"
-        stroke-width="7.11111"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="7.11111"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <rect x="99" y="161.5" width="7" height="71" fill="#90E9EF" />
     </svg>
