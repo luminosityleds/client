@@ -1,12 +1,12 @@
-import { useToggle } from "../ts/ToggleHeader";
+import { useToggleHeader } from "../state/ToggleHeader";
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
 
 export const LightMode = () => {
-  const lightMode = useToggle((state) => state.light);
+  const { light } = useToggleHeader();
   return (
-    <div className={`"App" ${lightMode ? "" : "dark"}`}>
+    <div className={`"App" ${light ? "" : "dark"}`}>
       <Header />
       <Content />
       <Footer />

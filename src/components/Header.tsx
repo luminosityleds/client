@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import LogoIcon from "./LogoIcon";
 import { useSpring, animated } from "@react-spring/web";
-import { useToggle } from "../ts/ToggleHeader";
+import { useToggleHeader } from "../state/ToggleHeader";
 import { Link } from "react-router-dom";
 
 const iconsFA = [
@@ -17,11 +17,12 @@ const iconsFA = [
 ];
 
 export const Header = () => {
+  const { light, handleToggleLight } = useToggleHeader();
   const springs = useSpring({
     config: {
       duration: 225, //in mS
     },
-    transform: useToggle.getState().light
+    transform: light
       ? "translateX(20px)"
       : "translateX(-4px)",
     from: { y: 1.6 },
@@ -34,23 +35,20 @@ export const Header = () => {
           <a href="/" className="site-logo">
             <LogoIcon />
           </a>
-          <a href="/">
+          <Link to="/">
             <span className="text-[32px] font-inter text-light hover:text-hover-light cursor-pointer dark:text-dark dark:hover:text-hover-dark">
               Luminosity LEDs
             </span>
-          </a>
+          </Link>
         </div>
         <div className="flex flex-row items-center">
           {iconsFA[0]}
           <div className="relative bg-light dark:bg-dark rounded-full h-[25px] w-[50px] flex flex-col justify-center m-2    ">
             <animated.button
               style={springs}
-              onClick={() => {
-                useToggle.setState({ light: !useToggle.getState().light });
-                console.log(useToggle.getState().light);
-              }}
+              onClick={handleToggleLight}
             >
-              {useToggle.getState().light ? (
+              {light ? (
                 <FontAwesomeIcon
                   icon={icon({ name: "circle" })}
                   className="h-[16px] pr-4 py-1.5 text-electric-blue dark:text-duke-blue"
