@@ -30,11 +30,11 @@
     "zustand": "^4.4.3"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest",
-    "coverage": "vitest run --coverage --watch=false"
+    "dev": "npm i && vite",
+    "build": "npm i && vite build",
+    "preview": "npm i && vite preview",
+    "test": "npm i && vitest",
+    "coverage": "npm i && vitest run --coverage --watch=false"
   },
   "eslintConfig": {
     "extends": [
